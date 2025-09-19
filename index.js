@@ -6,15 +6,24 @@ const matriztabela = [
     ["total", 0],
 ]
 
-const obterDados = (id) => document.getElementById(id).Value;
-const pegarCategoria = () => obterDados("categoria").Value;
+const obterDados = (id) => document.getElementById(id).value;
+const pegarCategoria = () => obterDados("categoria");
 const pegarValor = () => parseFloat(obterDados("valor"));
+const valornegativo = (valor) => valor < 0;
+const valortotal = (total , valor) => total + valor;
+
+const atualizarInterface = () => {
+    matriztabela.forEach(([nome, valor]) => {
+      const elemento = obterDados(nome);
+      elemento.textContent = '${nome}: R$ ${valor}';
+    }
+)}
+
+
 
 function teste() {
     const valor = pegarValor();
     const categoria = pegarCategoria();
-    alert(valor);
-    alert(categoria);
+    document.getElementById("categoria").innerText="${categoria}: $ r${valor}"; 
     return;
-
 }
