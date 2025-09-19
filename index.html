@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela-de-gastos</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Tabel de gastos</h1>
+    </header>
+
+    <main>
+        <input type="number" id="valor" placeholder="digite o valor">
+
+        <select id="categoria">
+            <option value="alimentacao">alimentacao</option>
+            <option value="transporte">transporter</option>
+            <option value="saude">saude</option>
+            <option value="educacao">educacao</option>
+        </select>
+
+        <button>calcular</button>
+
+        <nav>
+            <p id="alimentacao">alimentacao: 0,00</p>
+            <p id="transporte">transporte: 0,00</p>
+            <p id="saude">saude: 0,00</p>
+            <p id="educacao">educacao: 0,00</p>
+            <p id="total">total: 0,00</p>
+        </nav>
+    </main>
+    
+
+    <script src="index.js"></script>
+</body>
+</html>
